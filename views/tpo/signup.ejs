@@ -1,0 +1,62 @@
+<%- include ('../partials/header.html'); -%>
+		<title>Tpo SignUp</title>
+		<link rel="stylesheet" href="../../css/tpo.css">
+</head>
+<body>
+      <br><br><br>
+      <div class="container">
+          <% if (locals.message) { %>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col-6">
+              <div class="alert alert-success" role="alert">Your account has been created successfully, Now you can <a href="/tpo/login">Login</a></div>
+              </div>
+              <div class="col-3"></div>
+            </div>
+          <% } %>  
+      <br><br>   
+      <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 form-group bg-light border rounded border-primary">
+            <form action="/tpo/signup" method="POST" data-toggle="validator">
+                    <h2 class="text-center">TPO SignUp</h2><hr class="hl1"><br/>
+                    <div class="form-group">
+                      <label >TPOName</label>
+                      <input type="text" name="user_name" data-error="You must have a tponame." id="inputName" class="form-control" placeholder="TPOName"  required>
+                      <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                      <label >Email</label>
+                      <input type="email" name="user_email" id="inputEmail" class="form-control" placeholder="xyz@gmail.com"  required>
+                      <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                      <label >Password</label>
+                      <input type="password" name="user_pass" data-minlength="6" id="inputPassword"
+                      data-error="Have atleast 6 characters" class="form-control" placeholder="Password" required>
+                      <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                      <label >Collegename</label>
+                      <input type="text" name="collagename"  data-error="You must have a Collegename." id="inputName" class="form-control" placeholder="Collegename" required>
+                      <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+
+                    <% if (locals.register_error) { 
+                      register_error.forEach(function(error_msg){ %>
+                      <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                    <% });
+                    } %>
+                    <button type="submit" class="btn btn-outline-primary">Sign Up</button>
+                    <br/>
+                    <br/>
+              </form>
+      </div>
+      <div class="col-4"></div>
+      </div>
+      </div>
+<%- include ('../partials/footer.html'); -%>

@@ -1,0 +1,24 @@
+.try img{
+	width: 60%;
+	height: 30rem;
+	padding: auto;
+	border-radius: 2rem
+}
+hr.first{
+    border-top: 1px solid lightsteelblue;
+}
+.try2 img{
+    border-radius: 20px
+}
+
+.d1{
+    color:cornflowerblue;
+}
+
+.d2{
+    color:lightsalmon; 
+}
+
+hr.last{
+    border-top: 1px solid lightskyblue;
+}

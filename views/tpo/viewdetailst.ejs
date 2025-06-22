@@ -1,0 +1,127 @@
+<%- include ('../partials/header.html'); -%>
+		<title>ViewTpoDetails</title>
+		<link rel="stylesheet" href="../../css/tpo.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <hr class="hl1">
+                <div class = "page-header bg-light">
+                    <h1 class="text-center">
+                        Your Profile
+                    </h1>
+                 </div>
+                 <hr class="hl1"><br/>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            
+    <div class ="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 max-auto form-group bg-light border rounded border-primary">
+                <div class="row">
+                    <div class="col-md-6 profile-content">
+                            <p class="text-center" style="font-size:xx-large;">Tpo Detail</p>
+                        <hr><hr>    
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.tname%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.temail%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mobileno</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.mobileno%>" readonly>
+                            </div>
+                        </div>
+                        <hr> <hr>   
+                    </div>
+                    <div class="col-md-6 profile-content">
+                        <p class="text-center" style="font-size:xx-large;">College Detail</p>
+                            <hr><hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">CollegeName</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"  value="<%=res.collegename%>" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Website</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"  value="<%=res.website%>" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">City</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"  value="<%=res.city%>" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">NIRF Rank</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.nirf%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">NAAC Accrodited</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.nacc%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">NCTE</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.ncte%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">AICTE</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.aicte%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">UGC</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.ugc%>" readonly>
+                                </div>
+                            </div>
+                            <hr> <hr>   
+
+                    </div>
+                    <div>
+                        <pre>
+                                                    <a class="btn btn-outline-info" role="button" aria-pressed="true" href="/tpo/editdetailst">Edit Profile</a>
+                        </pre>
+                    </div>
+                   
+                </div>
+        
+        </div>
+        <div class="col-md-1"></div>
+        
+    </div> 
+</div>
+<%- include ('../partials/footer.html'); -%>

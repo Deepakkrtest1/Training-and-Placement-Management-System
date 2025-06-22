@@ -1,0 +1,149 @@
+<%- include ('../partials/header.html'); -%>
+		<title>Apply Oncampus Job</title>
+		<link rel="stylesheet" href="../../css/student.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container">
+    <div class ="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 max-auto form-group bg-light border rounded border-primary">
+            <h1 class="text-center"> Apply Oncampus Job</h1>
+            <hr class="hl1"><hr class="hl1">
+            
+            <form method="post" action="" data-toggle="validator">
+                <div class="">
+                    <% for(var i=0; i< errs.length; i++){ %>
+                        <div class="alert alert-danger" role="alert"><%= errs[i].message; %>
+                        <br>
+                    <% } %>
+                    <% for(var i=0; i< success.length; i++){ %>
+                        <div class="alert alert-success" role="alert"><%= success[i].message; %></div>
+                        <br>
+                    <% } %>
+                        </div>
+                <input type="text" name="cid" value="<%=res.cid%>" hidden>
+                <input type="text" name="jid" value="<%=res.jid%>" hidden>
+                <input type="text" name="sname" value="<%=res.sname%>" hidden>
+                <input type="text" name="dname" value="<%=res.dname%>" hidden>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >Company Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="cname" value="<%=res.cname%>" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >Location</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" data-error="You must have a Place." id="inputName" name="place" value="<%=res.place%>"readonly>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>	
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >Salary</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" min="0" max="1000000" data-error="You must have a Salary." id="inputName" name="salary" value="<%=res.salary%>" readonly>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >Bond_years</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" min="0" max="20" name="bondyears" id="inputNumber" value="<%=res.bondyears%>" readonly>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Service Agreement Des.</label>
+                    <div class="col-sm-9">
+                        <textarea type="text" class="form-control" rows="3" name="servagree" readonly><%=res.servagree%></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label for="inputState" class="col-sm-3 col-form-label">Jobtype</label>
+                    <div class="col-sm-5">
+                    <input  class="form-control" name="jobtype" value="<%=res.jobtype%>" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Job Description</label>
+                    <div class="col-sm-9">
+                        <textarea type="text" class="form-control" rows="3" name="jobinfo" readonly><%=res.jobinfo%></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Vacancy</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" min="1" max="10000" id="inputNumber" name="vacancy"  value="<%=res.vacancy%>" readonly>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">(Min criteria)</label>
+                    <label class="col-sm-3 col-form-label">AvgCPI(>=)</label>
+                    <div class="col-sm-2">
+                        <input type="float" class="form-control" id="inputNumber" name="minavgcp" value="<%=res.minavgcp%>" readonly>   
+                    </div>
+                    <label class="col-sm-3 col-form-label">backlogs(<=)</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" min="0" max="8" id="inputNumber" name="minblog" value="<%=res.minblog%>" readonly>
+                        
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Last Date of Registration</label>
+                    <div class="col-sm-5">
+                        <input type="date" class="form-control" name="lastdate" id="inputDate" value="<%=res.lastdate%>" readonly>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Date of Exam</label>
+                    <div class="col-sm-5">
+                        <input type="date" class="form-control" name="dateexam"  value="<%=res.dateexam%>" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Date of Interview</label>
+                    <div class="col-sm-5">
+                        <input type="date" class="form-control" name="dateinterview"  value="<%=res.dateinterview%>" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >Departments</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="department" value="<%=res.department%>" readonly>
+                    </div>
+                </div>
+                <hr><hr>  
+                <div>
+                    <br/>
+                    <pre>
+                            <button type="submit" class="btn btn-outline-info" onclick="return confirm('Are you sure you want to apply for this Job')">Apply Now</button>
+                    </pre>
+                </div>
+                
+        </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    </div>
+<%- include ('../partials/footer.html'); -%>

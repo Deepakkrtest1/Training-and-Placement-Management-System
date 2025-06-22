@@ -1,0 +1,149 @@
+<%- include ('../partials/header.html'); -%>
+		<title>EditTpoDetails</title>
+		<link rel="stylesheet" href="../../css/tpo.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <hr class="hl1">
+                <div class = "page-header bg-light">
+                    <h1 class="text-center">
+                        Edit Profile
+                    </h1>
+                 </div>
+                 <hr class="hl1"><br/>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 max-auto form-group bg-light border rounded border-primary">
+            <div class="row">
+                <div class="col-md-6 profile-content">
+                    <form action="/tpo/editdetailst" method="post">
+                        <p class="text-center" style="font-size:xx-large;">Tpo Detail</p>
+                        <hr><hr> 
+                    <input type="text" name="user_id" value="<%=res.tid%>" hidden>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="tname" value="<%=res.tname%>">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control"  value="<%=res.temail%>" readonly>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Mobileno</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="mobileno"  value="<%=res.mobileno%>">
+                        </div>
+                    </div>
+                    <hr><hr>    
+                </div>
+                    <div class="col-md-6 profile-content">
+                        <p class="text-center" style="font-size:xx-large;">College Detail</p>
+                            <hr><hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">CollegeName</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="collegename"  value="<%=res.collegename%>">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Website</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="website" value="<%=res.website%>" >
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">City</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="city" value="<%=res.city%>" >
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">NIRF Rank</label>
+                            <div class="col-sm-3">
+                                <input type="number" min="1" max="1000" class="form-control" name="nirf" value="<%=res.nirf%>">
+                            </div>
+                        </div>
+                        <hr>    
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">NAAC Accrodited</label>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="nacc" id="yes" value="yes" >
+                                    <label class="form-check-label" for="exampleRadios1">yes</label>
+                                </div>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="nacc" id="no" value="no" checked>
+                                    <label class="form-check-label" for="exampleRadios2">no</label>
+                                </div>
+                                
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">NCTE</label>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="ncte" id="yes" value="yes" >
+                                    <label class="form-check-label" for="exampleRadios1">yes</label>
+                                </div>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="ncte" id="no" value="no" checked>
+                                    <label class="form-check-label" for="exampleRadios2">no</label>
+                                </div>
+                                
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">AICTE</label>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="aicte" id="yes" value="yes" >
+                                    <label class="form-check-label" for="exampleRadios1">yes</label>
+                                </div>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="aicte" id="no" value="no" checked>
+                                    <label class="form-check-label" for="exampleRadios2">no</label>
+                                </div>
+                                
+                        </div> 
+                        <hr>  
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">UGC</label>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="ugc" id="yes" value="yes" >
+                                    <label class="form-check-label" for="exampleRadios1">yes</label>
+                                </div>
+                                <div class="form-check col-sm-3">
+                                    <input class="form-check-input" type="radio" name="ugc" id="no" value="no" checked>
+                                    <label class="form-check-label" for="exampleRadios2">no</label>
+                                </div>
+                                
+                        </div>
+                        <hr><hr>
+                     </div>
+                     <div>
+                        <pre>
+                                                        <button type="submit" class="btn btn-outline-info">Update</button>
+                        </pre>
+                    </div>
+                </form>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+    </div>
+<%- include ('../partials/footer.html'); -%>

@@ -1,0 +1,105 @@
+<%- include ('../partials/header.html'); -%>
+		<title>EditCompanyDetails</title>
+		<link rel="stylesheet" href="../../css/company.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container">
+    <div class ="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 max-auto form-group bg-light border rounded border-primary">
+                        <h1 class="text-center">Edit Profile</h1>
+                        <hr class="hl1"><hr class="hl1">   
+                        <form method="post" action="/company/editdetailsc">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">HrName</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.hrname%>" name="hrname">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cemail%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">CompanyName</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cname%>" name="cname">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Website</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cwebsite%>" name="cwebsite">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">City</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.city%>" name="city">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="inputState" class="col-sm-3 col-form-label">Company Type</label>
+                            <div class="col-sm-6">
+                            <select id="inputState" class="form-control" value="<%=res.ctype%>" name="ctype">
+                              <option selected>Choose...Type</option>
+                                <option>Public Limited Company</option>
+                                <option>Private Limited Company</option>
+                                <option>Joint-Venture Company</option>
+                                <option>Partnership Firm</option>
+                                <option>One Person Company</option>
+                                <option>Sole Proprietorship</option>
+                                <option>Branch Office</option>
+                                <option>Non-Government Organization (NGO)</option>
+                                <option>other</option>
+                            </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Other Info</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cinfo%>" name="cinfo">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mobileno</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cmobileno%>" name="cmobileno">
+                            </div>
+                        </div>
+                        <hr>  
+                        <div class="form-group row">
+                                <label for="inputState" class="col-sm-3 col-form-label">No of Employee</label>
+                                <div class="col-sm-6">
+                                <select id="inputState" class="form-control" value="<%=res.empl%>" name="empl">
+                                  <option selected>Choose...NumberEmp</option>
+                                  <option>less than 200</option>
+                                  <option>200 to 499</option>
+                                  <option>500 to 1000</option>
+                                  <option>more than 1000</option>
+                                </select>
+                                </div>
+                        </div>
+                        <hr><hr>
+                        <div>
+                            <pre>
+                            <button type="submit" class="btn btn-outline-info">Update</button>
+                            </pre>
+                        </div>
+                </form>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
+    </div>
+<%- include ('../partials/footer.html'); -%>

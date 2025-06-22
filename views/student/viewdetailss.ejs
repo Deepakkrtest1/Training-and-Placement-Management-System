@@ -1,0 +1,149 @@
+<%- include ('../partials/header.html'); -%>
+
+		<title>ViewStudentDetails</title>
+		<link rel="stylesheet" href="../../css/student.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <hr class="hl1">
+                <div class = "page-header bg-light">
+                    <h1 class="text-center">
+                        Your Profile
+                    </h1>
+                 </div>
+                 <hr class="hl1"><br/>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class ="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 max-auto form-group bg-light border rounded border-primary">
+                <div class="row">
+                    <div class="col-md-6 profile-content">
+                        <p class="text-center" style="font-size:xx-large;">Personal Detail</p>
+                        <hr><hr>    
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.sname%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.semail%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Age</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control"  value="<%=res.age%>" readonly>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Gender</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.gender%>" readonly>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">City</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.city%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">MobileNo</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.smobileno%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Is Verifed</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control"  value="<%=res.isverifed%>" readonly>
+                            </div>
+                        </div>
+                        <hr>   <hr> 
+                    </div>
+                    <div class="col-md-6 profile-content">
+                        <p class="text-center" style="font-size:xx-large;">Academic Detail</p>
+                            <hr><hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">CollegeName</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"  value="<%=res.collegename%>" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">DepartName</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"  value="<%=res.dname%>" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">PassingYear</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.passingyear%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">10thresult(%)</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%= res.result10%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">12thresult(%)</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%= res.result12%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Avg CPI</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.avgcgpa%>" readonly>
+                                </div>
+                            </div>
+                            <hr>    
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Backlogs</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  value="<%=res.backlogs%>" readonly>
+                                </div>
+                            </div>
+                            <hr> <hr>   
+
+                    </div>
+                    <div>
+                        <pre>
+                                                    <a class="btn btn-outline-info" role="button" aria-pressed="true" href="/student/editdetailss">Edit Profile</a>
+                        </pre>
+                    </div>
+                </div>
+        
+        </div>
+        <div class="col-md-1"></div>
+        
+    </div> 
+</div>
+<%- include ('../partials/footer.html'); -%>

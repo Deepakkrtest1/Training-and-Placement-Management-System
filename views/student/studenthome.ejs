@@ -1,0 +1,69 @@
+<%- include ('../partials/header.html'); -%>
+        <title>Student home</title>
+		<link rel="stylesheet" href="../../css/student.css">
+</head>
+<body>
+      <%- include ('partials/navbar.html'); -%>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="jumbotron text-center" style="color:azure" id="ju" >
+                <h1>WELCOME <%= sname.toUpperCase() %></h1>
+                <br/><br/><br/>
+                <p>WE ARE GLAD YOU'RE HERE</p>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <br>
+           <div class="row ">
+                <div class="col-md-2">     
+                </div>
+                <div class="col-md-8 bg-light">
+                <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="bg-white border rounded text-dark text-center p1h">
+                                THIS MANY MODULES USED UNDER YOUR ACCESS
+                                <hr class="f1">
+                            </div>
+                            <br>
+                            
+                            <div class="bg-white max-auto form-group border rounded">
+                                <br>
+                                    <div id="effview">
+                    <h3>+ Student Module</h3>
+                    <pre>
+            View Details<br/>
+            Update Details<br/>
+            Change Password<br/>
+                    </pre>
+                    <h3>+ TPO Module</h3>
+                    <pre>
+            View tpo Details<br/>
+            OnCampus Job Details<br/>
+            Applied Job Details<br/>
+                    </pre>
+                    <h3>+ Company(HR) Module</h3>
+                    <pre>
+            View Company Details<br/>
+            OffCampus Job Details<br/>
+            Applied Job Details<br/>
+                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div> 
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        </div>
+    </div>
+</div>
+<%- include ('../partials/footer.html'); -%>

@@ -1,0 +1,169 @@
+<%- include ('../partials/header.html'); -%>
+		<title>Request TPO </title>
+		<link rel="stylesheet" href="../../css/company.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container">
+    <div class ="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 max-auto form-group bg-light border rounded border-primary">
+            <h1 class="text-center">Requset Tpo</h1>
+            <hr class="hl1">
+            <div class="">
+                <% for(var i=0; i< errs.length; i++){ %>
+                    <div class="alert alert-danger" role="alert"><%= errs[i].message; %>
+                <% } %>
+                <% for(var i=0; i< success.length; i++){ %>
+                    <div class="alert alert-success" role="alert"><%= success[i].message; %></div>
+                <% } %>
+            </div>
+            <hr class="hl1">
+            <form method="post" action="/company/requesttpo" data-toggle="validator">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="des">Location</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" data-error="You must have a Place." id="inputName" name="place" required>
+                        <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>	
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Salary</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" data-error="You must have a Salary." id="inputName" name="salary" required>
+                        <!-- Error -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Bond_years</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" min="0" max="20" id="inputNumber" name="bondyears" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Service Agreement Des.</label>
+                    <div class="col-sm-9">
+                        <textarea type="text" class="form-control" rows="3" name="servagree" ></textarea>
+                        
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label for="inputState" class="col-sm-3 col-form-label">Jobtype</label>
+                    <div class="col-sm-5">
+                    <select id="inputState" class="form-control" name="jobtype" >
+                      <option selected>Job</option>
+                      <option>Only Internship</option>
+                      <option>Internship + Job</option>
+                    </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Job Description</label>
+                    <div class="col-sm-9">
+                        <textarea type="text" class="form-control" rows="3" name="jobinfo" ></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Vacancy</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" min="1" max="1000" id="inputNumber" name="vacancy" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">(Min criteria)</label>
+                    <label class="col-sm-3 col-form-label">AvgCPI(>=)</label>
+                    <div class="col-sm-2">
+                        <input type="float" class="form-control" id="inputNumber" name="minavgcp">   
+                    </div>
+                    <label class="col-sm-3 col-form-label">backlogs(<=)</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" min="0" max="8" id="inputNumber" name="minblog">
+                        
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label for="inputState" class="col-sm-3 col-form-label">SelectCollege</label>
+                    <div class="col-sm-5">
+                    <select id="inputState" class="form-control" name="college">
+                        <%
+                        let uniqueChars = [];
+                        if(userData.length!=0){
+                        var i=1;
+                        userData.forEach(function(data){
+                            if (!uniqueChars.includes(data.collegename)) {
+                                uniqueChars.push(data.collegename);
+                            }
+                        %>
+                        <%  i++; }) %>
+                        <% } else{ %>
+                            <tr>
+                                <option><td colspan="7">No Student found in database</td></option>
+                            </tr>
+                        <% } %>
+                        <%
+                        if(uniqueChars.length!=0){
+                
+                        uniqueChars.forEach(function(data){   
+                        %>
+                        <option><%= data%></option>
+                        <%  }) %>
+                        <% }  %>
+                    </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row">
+                    <label for="inputState" class="col-sm-3 col-form-label">Departments</label>
+                    <div class="col-sm-9">
+                        <%
+                        let uniqueChars1 = [];
+                        if(userData.length!=0){
+                        var i=1;
+                        userData.forEach(function(data){
+                            if (!uniqueChars1.includes(data.dname)) {
+                                uniqueChars1.push(data.dname);
+                            }
+                        %>
+                        <%  i++; }) %>
+                        <% } else{ %>
+                        <% } %>
+                        <%
+                        if(uniqueChars.length!=0){
+                
+                        uniqueChars1.forEach(function(data){   
+                        %>
+                        <div class="form-check form-check-inline ">
+                        <input type="checkbox" class=" form-check-input" id="inlineCheckbox1" name="department" value="<%= data%>" /> 
+                        <label class="form-check-label" for="inlineCheckbox1"><%= data%></label>
+                        </div>
+                        <%  }) %>
+                        <% }  %>
+                    </div>
+                </div>
+                <hr><hr>
+             <div>
+                <button type="submit" class="btn btn-outline-info">Request TPO</button>
+                <br/>
+                <br/>
+            </div>    
+        </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    </div>
+<%- include ('../partials/footer.html'); -%>

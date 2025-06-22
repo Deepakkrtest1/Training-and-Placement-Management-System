@@ -1,0 +1,121 @@
+<%- include ('../partials/header.html'); -%>
+		<title>ViewStudentDetails</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+		<link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="../../css/company.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <hr class="hl1">
+                    <div class = "page-header bg-light">
+                        <h1 class="text-center">
+                            Student List
+                        </h1>
+                     </div>
+                     <hr class="hl1"><br/>
+                </div>
+            </div>
+    <div class="row">   
+        <div class="col-sm-12 center">
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    &nbsp;
+                    <tr>
+                        <th>S.N</th>
+                        <th>sname</th>
+                        <th>Email</th>
+                        <th>College</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Gender</th>
+                        <th>Mobile</th>
+                        <th>IsVerifed</th>
+                        <th>Dname</th>
+                        <th>PassingYear</th>
+                        <th>10thresult</th>
+                        <th>12thresult</th>
+                        <th>avgcgpa</th>
+                        <th>Backlogs</th>
+                    </tr> 
+                </thead>
+               <tbody>
+                <%
+                if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                %>
+                &nbsp;
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.sname %></td>
+                    <td><%=data.semail %></td>
+                    <td><%=data.collegename %></td>
+                    <td><%=data.age %></td>
+                    <td><%=data.city %></td>
+                    <td><%=data.gender %></td>
+                    <td><%=data.smobileno %></td>
+                    <td><%=data.isverifed %></td>
+                    <td><%=data.dname %></td>
+                    <td><%=data.passingyear %></td>
+                    <td><%=data.result10 %></td>
+                    <td><%=data.result12 %></td>
+                    <td><%=data.avgcgpa %></td>
+                    <td><%=data.backlogs %></td>
+                </tr>
+                <%  i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                <% } %>
+               </tbody>
+               <tfoot>
+                &nbsp;
+                <tr>
+                    <th>S.N</th>
+                    <th>sname</th>
+                    <th>Email</th>
+                    <th>College</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Mobile</th>
+                    <th>IsVerifed</th>
+                    <th>Dname</th>
+                    <th>PassingYear</th>
+                    <th>10thresult</th>
+                    <th>12thresult</th>
+                    <th>avgcgpa</th>
+                    <th>Backlogs</th>
+                </tr> 
+               </tfoot>
+            </table>
+        </div>
+    </div>     
+    </div>
+    <div class="container-fluid">
+        <br><br>
+        <footer class="container-fluid text-center bg-light">
+            <hr class="last">
+            <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i>&nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;By Placement Management System</p>
+        </footer>
+        </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,85 @@
+<%- include ('../partials/header.html'); -%>
+		<title>ViewCompanyDetails</title>
+		<link rel="stylesheet" href="../../css/company.css">
+</head>
+<body>
+    <%- include ('partials/navbar.html'); -%>
+    <br/><br/><br/><br/>
+    <div class="container">
+    <div class ="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 max-auto form-group bg-light border rounded border-primary">
+                        <h1 class="text-center">View Profile</h1>
+                        <hr class="hl1"><hr class="hl1">    
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">HrName</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.hrname%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cemail%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">CompanyName</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cname%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Website</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cwebsite%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">City</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.city%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Company Type</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.ctype%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Other Info</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cinfo%>" readonly>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mobileno</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.cmobileno%>" readonly>
+                            </div>
+                        </div>
+                        <hr>  
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">No of Employee</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  value="<%=res.empl%>" readonly>
+                            </div>
+                        </div>
+                        <hr><hr>
+                        <div>
+                            <pre><a class="btn btn-outline-info" role="button" aria-pressed="true" href="/company/editdetailsc">Edit Profile</a>
+                            </pre>
+                        </div>  
+        </div>            
+        <div class="col-md-3"></div>  
+    </div> 
+</div>
+<%- include ('../partials/footer.html'); -%>
