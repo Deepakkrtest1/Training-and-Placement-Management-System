@@ -126,15 +126,15 @@ CREATE TABLE IF NOT EXISTS `jobdetail` (
 
 INSERT INTO `jobdetail` (`jid`, `cid`, `place`, `salary`, `bondyears`, `servagree`, `jobtype`, `jobinfo`, `vacancy`, `minavgcp`, `minblog`, `lastdate`, `dateexam`, `dateinterview`, `college`, `department`, `request`, `accepted`, `rejected`) VALUES
 (101, 5, 'Surat', '15000/month', '1', '', 'Job', '', '20', 8, 0, '2021-04-03', '2021-04-07', '2021-04-09', 'all', 'COMPUTER,IT', 'no', 'no', 'no'),
-(102, 5, 'Ahemdabaad', '20000/month', '0', '', 'Job', '', '25', 8, 0, '2021-04-08', '', '', 'tpocollege', 'COMPUTER,MCA', 'no', 'no', 'no'),
-(103, 5, 'Ahemdabaad', '5000/month', '0', '', 'Only Internship', '', '20', 7, 0, '', '', '', 'ddu', 'IT', 'yes', 'no', 'no'),
-(104, 5, 'Ahemdabaad', '20000/month', '0', 'some job serv agreement are there', 'Job', 'Field Eng', '35', 8.6, 0, '2021-04-06', '2021-04-01', '2021-04-04', 'tpocollege', 'COMPUTER,MBA', 'no', 'no', 'no'),
-(105, 5, 'Nadiad', '50000/month', '0', '', 'Internship + Job', '', '35', 8, 0, '2021-04-07', '2021-04-08', '2021-04-10', 'tpocollege', 'COMPUTER,IT', 'yes', 'yes', 'no'),
-(106, 5, 'Bangalore', '25000/month', '1', '', 'Job', '', '36', 8, 0, '', '', '', 'tpocollege', 'MBA,IT', 'yes', 'no', 'no'),
-(107, 7, 'Ahemdabaad', '20000/month', '1', '', 'Internship + Job', '', '25', 8, 0, '', '', '', 'tpocollege', 'COMPUTER', 'yes', 'no', 'yes'),
+(102, 5, 'Ahemdabaad', '20000/month', '0', '', 'Job', '', '25', 8, 0, '2021-04-08', '', '', 'HIT', 'COMPUTER,MCA', 'no', 'no', 'no'),
+(103, 5, 'Ahemdabaad', '5000/month', '0', '', 'Only Internship', '', '20', 7, 0, '', '', '', 'HIT', 'IT', 'yes', 'no', 'no'),
+(104, 5, 'Ahemdabaad', '20000/month', '0', 'some job serv agreement are there', 'Job', 'Field Eng', '35', 8.6, 0, '2021-04-06', '2021-04-01', '2021-04-04', 'HIT', 'COMPUTER,MBA', 'no', 'no', 'no'),
+(105, 5, 'Nadiad', '50000/month', '0', '', 'Internship + Job', '', '35', 8, 0, '2021-04-07', '2021-04-08', '2021-04-10', 'HIT', 'COMPUTER,IT', 'yes', 'yes', 'no'),
+(106, 5, 'Bangalore', '25000/month', '1', '', 'Job', '', '36', 8, 0, '', '', '', 'HIT', 'MBA,IT', 'yes', 'no', 'no'),
+(107, 7, 'Ahemdabaad', '20000/month', '1', '', 'Internship + Job', '', '25', 8, 0, '', '', '', 'HIT', 'COMPUTER', 'yes', 'no', 'yes'),
 (108, 7, 'Pune', '50000/month', '0', '', 'Internship + Job', '', '15', 9.1, 0, '2021-04-20', '2021-04-22', '2021-04-24', 'all', 'IT', 'no', 'no', 'no'),
 (111, 5, 'Ahemdabaad', '50000/month', '0', '', 'Internship + Job', '', '50', 8, 0, '2021-05-12', '', '', 'all', 'COMPUTER', 'no', 'no', 'no'),
-(112, 5, 'Ahemdabaad', '20000/month', '0', '', 'Internship + Job', '', '20', 0, 0, '2021-05-12', '', '', 'tpocollege', 'COMPUTER,IT', 'yes', 'yes', 'no');
+(112, 5, 'Ahemdabaad', '20000/month', '0', '', 'Internship + Job', '', '20', 0, 0, '2021-05-12', '', '', 'HIT', 'COMPUTER,IT', 'yes', 'yes', 'no');
 
 -- --------------------------------------------------------
 
@@ -168,21 +168,21 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`sid`, `sname`, `semail`, `spass`, `collegename`, `age`, `city`, `gender`, `smobileno`, `isverifed`, `dname`, `passingyear`, `result10`, `result12`, `avgcgpa`, `backlogs`) VALUES
-(39, 'adarsh', 'adarsh@gmail.com', '$2a$12$.1eGhO1/bImq2TQgW6aYo.kxBZVXsh19OZeLFT3.pOkIFUcNGmbsi', 'ddu', '20', 'surat', 'male', '2147483647', 'NO', 'computer', '2022', '85', '90', '8.67', '1'),
-(200, 'anjan', 'anjan@gmail.com', '$2a$12$Pg0ZzX6XZHkagJL75HUTSOTvL8RKBmQLgE4V3cbiMkKv9mV4sMGlq', 'tpocollege', '20', 'Jamnagar', 'male', '2147483647', 'NO', 'Civil', '2023', '94', '90', '9.08', '0'),
-(207, 'charmi Mehta', 'charmi@gmail.com', '$2a$12$122M1XJmR.CAa8zrXEwu2OB3cBJhOVZFPfc55Gnpcdz1mrJNizBh.', 'ddu', '21', 'dwarka', 'female', '2147483647', 'YES', 'Computer', '2022', '91', '85', '8.5', '0'),
-(208, 'jay sanghani', 'jay@gmail.com', '$2a$12$GWWzfVGfK52ZJ.xZQa.vLu03dczV.ZPa1Ntx6hZiETR9xkD0pxMKq', 'ddu', '21', 'surat', 'male', '2147483647', 'YES', 'MBA', '2021', '70', '75', '7.9', '2'),
-(209, 'kailash', 'kailash@gmail.com', '$2a$12$GR8g7QKL29BVBDHIOdeC2eRtst7wypSGBz9BBb3dQ.UBGdkIp0KOS', 'ddu', '20', 'nadiad', 'male', '2147483647', 'YES', 'MCA', '2022', '85', '70', '8.3', '1'),
-(210, 'dip Vachhani', 'dip@gmail.com', '$2a$12$moQY.KzFhGyYF49rM3ZNKepLl/cYtoSHKdRxkdBgIBPkT3ebx6RdO', 'ddu', '18', 'jamnagar', 'male', '2147483647', 'YES', 'Computer', '2021', '80', '95', '9', '0'),
-(211, 'shyam', 'shaym@gmail.com', '$2a$12$8dxy/dYpk94LBKaoapBBQOTAssbhJ3z.J5PgUtrEU2A7E8LLisDF.', 'ddu', '20', 'surat', 'male', '2147483647', 'YES', 'It', '2021', '92', '95', '7.77', '0'),
-(212, 'drashty patel', 'drashty@gmail.com', '$2a$12$q33tcFQm4EzKZchI7CBnLOafDrIdpD2UqHQPXa72kJD3sVj71qo9i', 'ddu', '21', 'jamnagar', 'female', '2147483647', 'YES', 'Chemical', '2022', '90', '90', '9', '0'),
-(213, 'kd', 'kd@gmail.com', '$2a$12$Ba78di7cHQED47LNm4GBxuVpsJ4U6QPiGrUkODXvasgicpxBDcAJu', 'nirma', '20', 'Jamnangar', 'male', '0', 'NO', 'Chemical', '2023', '80', '80', '8.5', '0'),
-(254, 'Darshak Kathiriya', 'darshak@gmail.com', '$2a$12$OU/.rQC1xpIsuQUclL3t.uiGPqtZfwmcn7LyXR81YRsU8V4aoz0eG', 'tpocollege', '18', 'jamnagar', 'male', '9988776655', 'YES', 'It', '2021', '90', '95', '8', '0'),
-(255, 'ramesh sanghani', 'ramesh@gmail.com', '$2a$12$q5yDzxDDzt8dlwCW4BztCudU98YGfbiizKHveloi1KqiXkSibkhky', 'tpocollege', '20', 'surat', 'male', '2147483647', 'YES', 'MBA', '2021', '70', '75', '7.9', '1'),
-(256, 'mahesh', 'mahesh@gmail.com', '$2a$12$ShnXjXMgekd2aIp9.F/qa.0lM/3oQxv0XzwdOp6doMKGVNc3C6OFy', 'tpocollege', '20', 'nadiad', 'male', '2147483647', 'YES', 'Computer', '2022', '85', '70', '8.3', '2'),
-(257, 'ayushi ajudiya', 'ayushi@gmail.com', '$2a$12$1nNV0kKxxSzF8DlK8zUP2O3LFoPYjvzkU5aPBZqbKKGmFfiLYGhHm', 'tpocollege', '19', 'jamnagar', 'female', '2147483647', 'YES', 'Chemical', '2022', '90', '90', '9', '0'),
-(258, 'Nihal Limbani', 'nihal@gmail.com', '$2a$12$G.bxGyl/iOcO8ALLHuo3ZOwsOFpiPT2ftUdi/bu3jl056OjQww0ka', 'tpocollege', '19', 'dwarka', 'male', '2147483647', 'YES', 'Computer', '2022', '91', '85', '8.5', '0'),
-(259, 'suresh', 'suresh@gmail.com', '$2a$12$U38VJAd2zXSXdvBT.3wH8OPRAK0.bbwt58iSImpXWH0Aq0Y6C.Vdq', 'tpocollege', '20', 'surat', 'male', '2147483647', 'YES', 'It', '2021', '92', '95', '7.77', '0');
+(39, 'adarsh', 'adarsh@gmail.com', '$2a$12$.1eGhO1/bImq2TQgW6aYo.kxBZVXsh19OZeLFT3.pOkIFUcNGmbsi', 'HIT', '20', 'surat', 'male', '2147483647', 'NO', 'computer', '2022', '85', '90', '8.67', '1'),
+(200, 'anjan', 'anjan@gmail.com', '$2a$12$Pg0ZzX6XZHkagJL75HUTSOTvL8RKBmQLgE4V3cbiMkKv9mV4sMGlq', 'HIT', '20', 'Jamnagar', 'male', '2147483647', 'NO', 'Civil', '2023', '94', '90', '9.08', '0'),
+(207, 'charmi Mehta', 'charmi@gmail.com', '$2a$12$122M1XJmR.CAa8zrXEwu2OB3cBJhOVZFPfc55Gnpcdz1mrJNizBh.', 'HIT', '21', 'dwarka', 'female', '2147483647', 'YES', 'Computer', '2022', '91', '85', '8.5', '0'),
+(208, 'jay sanghani', 'jay@gmail.com', '$2a$12$GWWzfVGfK52ZJ.xZQa.vLu03dczV.ZPa1Ntx6hZiETR9xkD0pxMKq', 'HIT', '21', 'surat', 'male', '2147483647', 'YES', 'MBA', '2021', '70', '75', '7.9', '2'),
+(209, 'kailash', 'kailash@gmail.com', '$2a$12$GR8g7QKL29BVBDHIOdeC2eRtst7wypSGBz9BBb3dQ.UBGdkIp0KOS', 'HIT', '20', 'nadiad', 'male', '2147483647', 'YES', 'MCA', '2022', '85', '70', '8.3', '1'),
+(210, 'dip Vachhani', 'dip@gmail.com', '$2a$12$moQY.KzFhGyYF49rM3ZNKepLl/cYtoSHKdRxkdBgIBPkT3ebx6RdO', 'HIT', '18', 'jamnagar', 'male', '2147483647', 'YES', 'Computer', '2021', '80', '95', '9', '0'),
+(211, 'shyam', 'shaym@gmail.com', '$2a$12$8dxy/dYpk94LBKaoapBBQOTAssbhJ3z.J5PgUtrEU2A7E8LLisDF.', 'HIT', '20', 'surat', 'male', '2147483647', 'YES', 'It', '2021', '92', '95', '7.77', '0'),
+(212, 'drashty patel', 'drashty@gmail.com', '$2a$12$q33tcFQm4EzKZchI7CBnLOafDrIdpD2UqHQPXa72kJD3sVj71qo9i', 'HIT', '21', 'jamnagar', 'female', '2147483647', 'YES', 'Chemical', '2022', '90', '90', '9', '0'),
+(213, 'kd', 'kd@gmail.com', '$2a$12$Ba78di7cHQED47LNm4GBxuVpsJ4U6QPiGrUkODXvasgicpxBDcAJu', 'HIT', '20', 'Jamnangar', 'male', '0', 'NO', 'Chemical', '2023', '80', '80', '8.5', '0'),
+(254, 'Nikhil kumar', 'nikhilkumar@gmail.com', '$2a$12$OU/.rQC1xpIsuQUclL3t.uiGPqtZfwmcn7LyXR81YRsU8V4aoz0eG', 'HIT', '18', 'Haldia', 'male', '1234567899', 'YES', 'It', '2021', '90', '95', '8', '0'),
+(255, 'ramesh sanghani', 'ramesh@gmail.com', '$2a$12$q5yDzxDDzt8dlwCW4BztCudU98YGfbiizKHveloi1KqiXkSibkhky', 'HIT', '20', 'surat', 'male', '2147483647', 'YES', 'MBA', '2021', '70', '75', '7.9', '1'),
+(256, 'mahesh', 'mahesh@gmail.com', '$2a$12$ShnXjXMgekd2aIp9.F/qa.0lM/3oQxv0XzwdOp6doMKGVNc3C6OFy', 'HIT', '20', 'nadiad', 'male', '2147483647', 'YES', 'Computer', '2022', '85', '70', '8.3', '2'),
+(257, 'ayushi ajudiya', 'ayushi@gmail.com', '$2a$12$1nNV0kKxxSzF8DlK8zUP2O3LFoPYjvzkU5aPBZqbKKGmFfiLYGhHm', 'HIT', '19', 'jamnagar', 'female', '2147483647', 'YES', 'Chemical', '2022', '90', '90', '9', '0'),
+(258, 'Deepak kumar', 'deepakkrtest1@gmail.com', '$2a$12$G.bxGyl/iOcO8ALLHuo3ZOwsOFpiPT2ftUdi/bu3jl056OjQww0ka', 'HIT', '19', 'Haldia', 'male', '2147483647', 'YES', 'Computer', '2022', '91', '85', '8.5', '0'),
+(259, 'suresh', 'suresh@gmail.com', '$2a$12$U38VJAd2zXSXdvBT.3wH8OPRAK0.bbwt58iSImpXWH0Aq0Y6C.Vdq', 'HIT', '20', 'surat', 'male', '2147483647', 'YES', 'It', '2021', '92', '95', '7.77', '0');
 
 -- --------------------------------------------------------
 
@@ -213,9 +213,9 @@ CREATE TABLE IF NOT EXISTS `tpo` (
 --
 
 INSERT INTO `tpo` (`tid`, `tname`, `temail`, `tpassword`, `collegename`, `city`, `mobileno`, `website`, `nirf`, `nacc`, `ncte`, `aicte`, `ugc`) VALUES
-(9, 'VipulDabhisir', 'vipuldabhi@gmail.com', '$2a$12$5acV8OmlNEu1/X8bL7HMsOLtv.46RkgS4XUVqBkDTMS.r5Yd28Yau', 'ddu', 'Nadiad', '6543219877', 'www.ddit.com', '120', 'yes', 'yes', 'no', 'no'),
-(10, 'mmg sir', 'mmgsir@gmail.com', '$2a$12$jSx1bCgsYMaOJQEWKcFT6OzyRCoAnOrIcdU5Y5PQ8vjuaw4sDRIX2', 'nirma', 'Ahmedabad', '9992255555', 'www.nirma.com', '80', 'yes', 'no', 'yes', 'yes'),
-(36, 'TPO', 'tpo@gmail.com', '$2a$12$.7EI0jWvpRUk0H/OwkqGE.p091.5PLrzMf.SxLJ0Y2ymfHJuCKsIy', 'tpocollege', 'Jamnangar', '9987654333', 'www.tpo.com', '10', 'no', 'yes', 'yes', 'no');
+(9, 'VipulDabhisir', 'vipuldabhi@gmail.com', '$2a$12$5acV8OmlNEu1/X8bL7HMsOLtv.46RkgS4XUVqBkDTMS.r5Yd28Yau', 'HIT', 'Nadiad', '6543219877', 'www.ddit.com', '120', 'yes', 'yes', 'no', 'no'),
+(10, 'mmg sir', 'mmgsir@gmail.com', '$2a$12$jSx1bCgsYMaOJQEWKcFT6OzyRCoAnOrIcdU5Y5PQ8vjuaw4sDRIX2', 'HIT', 'Ahmedabad', '9992255555', 'www.HIT.com', '80', 'yes', 'no', 'yes', 'yes'),
+(36, 'TPO', 'tpo@gmail.com', '$2a$12$.7EI0jWvpRUk0H/OwkqGE.p091.5PLrzMf.SxLJ0Y2ymfHJuCKsIy', 'HIT', 'Jamnangar', '9987654333', 'www.tpo.com', '10', 'no', 'yes', 'yes', 'no');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

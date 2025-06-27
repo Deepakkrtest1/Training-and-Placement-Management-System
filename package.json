@@ -1,29 +1,29 @@
-{
-  "name": "placement1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dStart": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.6.0",
-    "cookie-session": "^1.4.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "express-validator": "^6.9.2",
-    "multer": "^1.4.2",
-    "mysql2": "^2.2.5",
-    "nodeman": "^1.1.2",
-    "nodemon": "^2.0.7",
-    "path": "^0.12.7",
-    "read-excel-file": "^5.0.0",
-    "req-flash": "0.0.3"
-  }
-}
+ {
+     "name": "placement1",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+         "start": "node index.js",
+         "dStart": "nodemon index.js",
+         "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+         "bcryptjs": "^2.4.3",
+         "bootstrap": "^5.3.7",
+         "cookie-session": "^1.4.0",
+         "ejs": "^3.1.6",
+         "express": "^4.17.1",
+         "express-session": "^1.17.1",
+         "express-validator": "^6.9.2",
+         "multer": "^2.0.1",
+         "mysql2": "^3.14.1",
+         "nodeman": "^1.1.2",
+         "nodemon": "^2.0.7",
+         "path": "^0.12.7",
+         "read-excel-file": "^5.0.0",
+         "req-flash": "0.0.3"
+     }
+ }
