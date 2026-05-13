@@ -1,60 +1,52 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="studenthome"><i class="fas fa-book-open"></i> STUDENT</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
+<nav class="navbar navbar-expand-lg navbar-light student-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand student-brand" href="/student/studenthome"><i class="fa fa-book"></i> STUDENT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/student/studenthome">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Company
-</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/student/viewcompany"><pre>View Company 
-Details</pre></a><div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/student/offcampjob"><pre>OffCampus
-Job Details</pre></a>
-                    <a class="dropdown-item" href="/student/appliedoffjob"><pre>Applied
-Job Details</pre></a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  TPO
-</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/student/viewtpo"><pre>View TPO
-Details</pre></a><div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/student/oncampjob"><pre>OnCampus
-Job Details</pre></a>
-                    <a class="dropdown-item" href="/student/appliedonjob"><pre>Applied
-Job Details</pre></a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Profile
-</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/student/viewdetailss">
-                    <pre>View
-Profile</pre></a>
-                    <a class="dropdown-item" href="/student/editdetailss">
-                    <pre>Edit 
-Profile</pre></a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/student/changepass">
-                    <pre>Change
-Password</pre></a>
-                    <a class="dropdown-item" href="/logout">Logout</a>
-                </div>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/student/studenthome">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Company
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="companyDropdown">
+                        <a class="dropdown-item" href="/student/viewcompany">View Company Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/student/offcampjob">OffCampus Job Details</a>
+                        <a class="dropdown-item" href="/student/appliedoffjob">Applied Job Details</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="tpoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        TPO
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tpoDropdown">
+                        <a class="dropdown-item" href="/student/viewtpo">View TPO Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/student/oncampjob">OnCampus Job Details</a>
+                        <a class="dropdown-item" href="/student/appliedonjob">Applied Job Details</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="/student/viewdetailss">View Profile</a>
+                        <a class="dropdown-item" href="/student/editdetailss">Edit Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/student/changepass">Change Password</a>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 	
