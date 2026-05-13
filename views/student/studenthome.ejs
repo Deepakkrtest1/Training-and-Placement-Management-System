@@ -1,69 +1,69 @@
 <%- include ('../partials/header.html'); -%>
-        <title>Student home</title>
+        <title>Student Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="../../css/student.css">
 </head>
-<body>
+<body class="student-home-page">
       <%- include ('partials/navbar.html'); -%>
-      <br/><br/><br/><br/>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="jumbotron text-center" style="color:azure" id="ju" >
-                <h1>WELCOME <%= sname.toUpperCase() %></h1>
-                <br/><br/><br/>
-                <p>WE ARE GLAD YOU'RE HERE</p>
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
-    <br>
-           <div class="row ">
-                <div class="col-md-2">     
-                </div>
-                <div class="col-md-8 bg-light">
-                <br>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <div class="bg-white border rounded text-dark text-center p1h">
-                                THIS MANY MODULES USED UNDER YOUR ACCESS
-                                <hr class="f1">
-                            </div>
-                            <br>
-                            
-                            <div class="bg-white max-auto form-group border rounded">
-                                <br>
-                                    <div id="effview">
-                    <h3>+ Student Module</h3>
-                    <pre>
-            View Details<br/>
-            Update Details<br/>
-            Change Password<br/>
-                    </pre>
-                    <h3>+ TPO Module</h3>
-                    <pre>
-            View tpo Details<br/>
-            OnCampus Job Details<br/>
-            Applied Job Details<br/>
-                    </pre>
-                    <h3>+ Company(HR) Module</h3>
-                    <pre>
-            View Company Details<br/>
-            OffCampus Job Details<br/>
-            Applied Job Details<br/>
-                    </pre>
-                                </div>
-                            </div>
+
+      <main class="student-page-wrap">
+            <div class="container">
+                  <section class="welcome-section">
+                        <div class="row justify-content-center">
+                              <div class="col-lg-10">
+                                    <div class="welcome-banner text-center" id="ju">
+                                          <h1>WELCOME <%= sname.toUpperCase() %></h1>
+                                          <p>We are glad you're here.</p>
+                                          <div class="welcome-actions">
+                                                <a href="/student/viewdetailss" class="btn btn-light">View Profile</a>
+                                                <a href="/student/oncampjob" class="btn btn-outline-light">On-Campus Jobs</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div> 
-                <div class="col-md-2"></div>
+                  </section>
+
+                  <section class="module-section">
+                        <div class="row justify-content-center">
+                              <div class="col-lg-8">
+                                    <div class="module-shell">
+                                          <div class="module-header text-center">
+                                                <h2>Modules Available Under Your Access</h2>
+                                                <hr class="f1">
+                                                <p>Use the sections below to explore student, TPO, and company features from one place.</p>
+                                          </div>
+
+                                          <div class="module-card">
+                                                <div id="effview">
+                                                      <h3>+ Student Module</h3>
+                                                      <div class="module-content">
+                                                            <p>View Details</p>
+                                                            <p>Update Details</p>
+                                                            <p>Change Password</p>
+                                                      </div>
+
+                                                      <h3>+ TPO Module</h3>
+                                                      <div class="module-content">
+                                                            <p>View TPO Details</p>
+                                                            <p>OnCampus Job Details</p>
+                                                            <p>Applied Job Details</p>
+                                                      </div>
+
+                                                      <h3>+ Company(HR) Module</h3>
+                                                      <div class="module-content">
+                                                            <p>View Company Details</p>
+                                                            <p>OffCampus Job Details</p>
+                                                            <p>Applied Job Details</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
             </div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        </div>
-    </div>
-</div>
+      </main>
+
 <%- include ('../partials/footer.html'); -%>

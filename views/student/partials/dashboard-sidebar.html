@@ -1,0 +1,41 @@
+<aside class="student-sidebar" id="studentSidebar">
+    <div class="sidebar-brand">
+        <a href="/student/studenthome">
+            <span class="sidebar-brand-mark"><i class="fa fa-graduation-cap"></i></span>
+            <span>
+                <strong>Student Desk</strong>
+                <small>Placement workspace</small>
+            </span>
+        </a>
+    </div>
+
+    <div class="sidebar-profile-card">
+        <div class="avatar-ring">
+            <span><%= sname ? sname.charAt(0).toUpperCase() : 'S' %></span>
+        </div>
+        <div>
+            <h3><%= sname %></h3>
+            <p>Final-year candidate</p>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="active" href="/student/studenthome"><i class="fa fa-th-large"></i><span>Dashboard</span></a>
+        <a href="/student/viewdetailss"><i class="fa fa-user-o"></i><span>My Profile</span></a>
+        <a href="/student/editdetailss"><i class="fa fa-pencil-square-o"></i><span>Update Profile</span></a>
+        <a href="/student/viewcompany"><i class="fa fa-building-o"></i><span>Companies</span></a>
+        <a href="/student/offcampjob"><i class="fa fa-briefcase"></i><span>Off-Campus Jobs</span></a>
+        <a href="/student/oncampjob"><i class="fa fa-university"></i><span>On-Campus Drives</span></a>
+        <a href="/student/appliedoffjob"><i class="fa fa-paper-plane-o"></i><span>Applied Off-Campus</span></a>
+        <a href="/student/appliedonjob"><i class="fa fa-check-square-o"></i><span>Applied On-Campus</span></a>
+        <a href="/student/viewtpo"><i class="fa fa-users"></i><span>TPO Connect</span></a>
+        <a href="/student/changepass"><i class="fa fa-lock"></i><span>Security</span></a>
+    </nav>
+
+    <div class="sidebar-footer-card">
+        <span class="eyebrow">Interview prep</span>
+        <strong>Mock assessment slot</strong>
+        <p>Friday, 3:30 PM with placement mentors.</p>
+        <a href="/student/viewtpo">View TPO details</a>
+    </div>
+</aside>
